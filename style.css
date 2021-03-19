@@ -408,6 +408,7 @@ ul {
 .players__table {
     width: 100%;
     text-align: center;
+    font-size: 12px;
 }
 .select__row {
     width: 200px;
@@ -422,10 +423,18 @@ ul {
 .table__head {
     background-color:rgb(27, 96, 155);
 }
+.players__table tr td {
+    padding: 3px 3px;
+}
 
 
 
 
+
+
+
+
+/* foooooooooooooooooooteeeeeeeeeeeeerrrrrrrrrrrrrr */
 
 .footer__inner {
     padding-bottom: 20px;
