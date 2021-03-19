@@ -352,6 +352,10 @@ ul {
 .club__table tr.table__header {
     background-color:rgb(27, 96, 155);
 }
+.warning__logo {
+    width: 15px;
+    cursor: pointer;
+}
 .club__table-player,
 .club__table-team {
     text-align: left;
@@ -367,10 +371,6 @@ ul {
     color: green;
     font-weight: bold;
 }
-.window-closed {
-    color: red;
-    font-weight: bold;
-}
 .save__btn {
     text-align: center;
     background: rgb(35, 82, 124);
@@ -379,7 +379,7 @@ ul {
     color: white;
     cursor: pointer;
 }
-.disable__btn {
+.save__btn-activated {
     opacity: 0.2;
     cursor: default;
 }
@@ -409,8 +409,19 @@ ul {
     width: 100%;
     text-align: center;
 }
-
-
+.select__row {
+    width: 200px;
+}
+.players__table tr {
+    background-color: rgb(238, 238, 238);
+    
+}
+.players__table tr:nth-child(2n) {
+    background-color: rgb(221, 221, 221);
+}
+.table__head {
+    background-color:rgb(27, 96, 155);
+}
 
 
 
