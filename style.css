@@ -1,0 +1,562 @@
+@import "css/best.css";
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+  /*  font-family: 'Inter', sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    margin: 0;
+    background-color: #1b609b;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+.header {
+    background-color: rgb(31, 62, 97);
+    box-shadow: rgb(0 0 0 / 50%) 0px 1px 5px;
+   /* margin-bottom: 20px; */
+    height: 40px;
+    position: fixed; /* Липкое позиционирование */
+    top: 0;
+    left: 0; 
+    width: 100%;
+    z-index: 98;
+}
+.header__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    padding-top: 2px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+.hamburger__btn {
+    margin-left: 20px;
+    min-width: 29px;
+    height: 24px;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 5px 5px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.hamburger__btn-line {
+    height: 2px;
+    margin-bottom: 3px;
+    background-color: rgb(204, 204, 204);
+    
+}
+.header__registration {
+    display: flex;
+    display: none;
+}
+.header__account {
+    display: flex;
+}
+.header__avatar {
+    background-image: url('images/avatar.PNG');
+    background-size: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgb(204, 204, 204);
+    margin-left: 10px;
+}
+.header__avatar:hover {
+    cursor: pointer;
+    box-shadow: rgb(204 204 204) 0px 1px 5px;
+}
+/*.avatar {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+} */
+.message__counter,
+.money__counter {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.message__unread {
+    font-size: 18px;
+    font-weight: bold;
+}
+.header__link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 15px;
+    color: rgb(204, 204, 204);
+    transition: all 0.4s;
+}
+.header__link:hover {
+    color: rgba(255,255,255);
+}
+.header__account-info {
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    height: 100px;
+    width: 205px;
+    background:  rgba(255,255,255);
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: rgb(0 0 0 / 50%) 0px 1px 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.user-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(31, 62, 97);
+    margin-bottom: 5px;
+}
+.user-emale {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.exit__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+}
+.exit__link {
+    margin-right: 10px;
+}
+.exit-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(31, 62, 97);
+}
+.top__section {
+    background: rgba(255,255,255);
+    background-image: url('images/top-background.png');
+    background-size: 590px auto;
+
+}
+.top__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding-left: 20px;
+    padding-right: 20px; */
+    background: rgba(255,255,255,0.8);
+    /*height: 100px; */
+    margin-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.top__main {
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+}
+.top__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    border-left: 1px solid rgb(238, 238, 238);
+    border-right: 1px solid rgb(238, 238, 238);
+    background: rgba(255,255,255);
+    height: 125px;
+    padding-bottom: 10px;
+}
+.top__info-reminder {
+    background-color: rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    min-width: 200px;
+}
+.top__info-reminder p {
+    text-transform: uppercase;
+
+    font-weight: bold;
+    padding: 10px;
+
+}
+.top__info-counter p {
+    font-size: 20px;
+}
+.days-counter {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.coupon__link {
+
+    color: #23527c;
+    text-decoration: underline transparent;
+    transition: all 0.5s;
+}
+.coupon__link:hover {
+    text-decoration: underline;
+}
+.top__title h1 {
+    /* font-family: 'Inter', sans-serif; */
+    display: table;
+    word-spacing: 60px;
+    line-height: 1.5;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-left: 15px;
+    color: rgb(27, 96, 155);
+}
+.main__section {
+    background-color: rgba(255,255,255);
+}
+ul {
+    list-style: none;
+}
+.main__inner {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main__menu {
+    background-color: rgba(255,255,255);
+    min-width: 150px;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+}
+.top__info-reminder .span__title {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.span__title {
+    display: block;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    color: rgb(0, 170, 50);
+    background-color: rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    padding: 5px 10px;
+}
+.span__link {
+    color: rgb(0, 170, 50);
+}
+.span__link:hover {
+    text-decoration: underline;
+}
+.clubs__standing .span__link:hover {
+    text-decoration: none;
+}
+.navigation {
+    position: sticky;
+    top: 40px;
+}
+.navigation__list-item--link {
+   /* font-family: 'Inter', sans-serif; */
+    color: #23527c;
+    display: block;
+    padding: 5px 7px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    text-align: left;  
+}
+.navigation__list-item--link:hover {
+    background-color: rgb(238, 238, 238);
+}
+.navigation__list-item--link {
+    position: relative;    
+}
+.notification {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    background-color: rgb(153, 153, 153);
+    color: rgba(255,255,255);
+    font-size: 12px;
+    min-width: 22px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.transfer__block {
+    width: 100%;
+    padding-bottom: 10px;
+}
+.transfer__inner {
+    display: flex;
+    flex-direction: column;
+}
+.transfer__nav {
+    display: flex;
+    padding: 5px;
+    margin: 10px 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.transfer__heading-link {
+    padding: 2px 10px;
+    color: #23527c;
+}
+.transfer__heding:first-child { 
+    border-right: 1px solid rgb(238, 238, 238);
+}
+.transfer__main {
+    display: flex;
+    justify-content: space-between;
+}
+.current__club {
+    width: 49%;
+}
+.club__table {
+    width: 100%;
+    text-align: center;
+}
+.club__table-header {
+    display: flex;
+    justify-content: space-between;
+}
+.table__head {
+    padding: 5px 10px;
+    color: white;
+}
+.club__table td {
+    padding: 3px;
+}
+.club__table tr:nth-child(2n+1) {
+    background-color: rgb(221, 221, 221);
+}
+.club__table tr:nth-child(2n) {
+    background-color: rgb(238, 238, 238);
+}
+.club__table tr.table__header {
+    background-color:rgb(27, 96, 155);
+}
+.club__table-player,
+.club__table-team {
+    text-align: left;
+}
+.transfer__window {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+}
+.window-open {
+    color: green;
+    font-weight: bold;
+}
+.window-closed {
+    color: red;
+    font-weight: bold;
+}
+.save__btn {
+    text-align: center;
+    background: rgb(35, 82, 124);
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+}
+.disable__btn {
+    opacity: 0.2;
+    cursor: default;
+}
+.players__list {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.players__list-back {
+    padding: 8px;
+    color: rgb(35, 82, 124);
+    cursor: pointer;
+}
+.transfer__balance {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+}
+.balance-counter {
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.players__table {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.footer__inner {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footer__copyright {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(204, 204, 204);
+}
+.footer__copyright-link {
+    margin-left: 10px;
+    color: rgb(204, 204, 204);
+    transition: all 0.4s;
+
+}
+.footer__copyright-link:hover {
+    color: rgba(255,255,255);
+}
+
+@media screen and (max-width: 768px) {
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hamburger__btn {
+        display: block;
+    }
+    .main__menu {
+        position: absolute; /* освобождаем место для горизонтальных новостей, чтобы они "заплывали" под мобильное меню */
+        left: 0;
+        top: 0;
+    }
+    .navigation .span__title {
+        display: none;
+    }
+    .main__menu .navigation__list {
+        position: fixed;
+        left: 0;
+        top: 0;
+        min-width: 200px;
+        height: 100%;
+        padding: 10px;
+        background-color: rgba(255,255,255);
+        box-shadow: rgb(0 0 0 / 50%) 0px 1px 5px;
+        display: none;
+        z-index: 100;   /* перекрываем липкий header */
+    }
+    .navigation__list::before { /* добавляем название сайта на верх всплывающего мобильного меню */
+        content: 'Openball';
+        height: 30px;
+        padding: 7px 14px;
+        font-size: 18px;
+        color: #23527c;
+        line-height: 20px;
+        margin: 10px 0px;
+        display: block;
+        text-decoration: none;
+        text-align: left;
+        cursor: pointer;
+    }
+    .header::after {  /* тень на остальной экран после всплывания мобильного меню */
+        content: "";
+        background-color: rgb(0, 0, 0, 0.3);
+        position: fixed;
+        inset: 0px; /* вот это я так и не понял зачем, но без этого свойства тень не выходит */
+        display: none;
+    }
+    .navigation__list-item {
+        height: 30px;
+        padding: 7px 14px;
+        border-bottom: 1px solid rgb(238, 238, 238);
+    }
+    .navigation__list-item--link {
+        padding: 0;
+        border-bottom: none;
+    }
+    .navigation__list-item:hover {
+        background-color: rgb(238, 238, 238);
+    }
+    
+
+}
+
+@media screen and (max-width: 640px) {
+    .top__inner {
+        position: relative;
+    }
+    .top__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        /* justify-content: ; */
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-left: none;
+        border-right: none;
+    }
+    .top__main {
+        margin-bottom: 30px;
+    }
+    .top__info-reminder {
+        background-color: rgba(255,255,255);
+        border-bottom: none;
+        min-width: auto;
+    }
+    .top__info-reminder .span__title {
+        text-transform: none;
+        margin-bottom: 0;
+        background-color: rgba(255,255,255);
+        padding: 0;
+        
+    }
+    .top__info-counter p {
+        font-size: 14px;
+        
+    }
+    .days-counter {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .logo-openball {
+        width: 100px;
+    }
+    .top__title h1 {
+        font-size: 14px;
+    }
+    .top__section {
+        background-size: 390px auto;
+    }
+    .message__text {
+        display: none;
+    }
+}
