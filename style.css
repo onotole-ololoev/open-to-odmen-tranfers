@@ -357,6 +357,11 @@ ul {
     width: 15px;
     cursor: pointer;
 }
+.plus__logo {
+    width: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
 .club__table-player,
 .club__table-team {
     text-align: left;
