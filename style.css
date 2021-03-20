@@ -460,6 +460,9 @@ ul {
 .active {
     background-color: rgb(240, 255, 255);
 }
+.buy {
+    opacity: 0.5;
+}
 /* прячем кнопку НАЗАД */
 .players__list-back {
     display: block;
