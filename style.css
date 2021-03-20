@@ -368,8 +368,8 @@ ul {
     background-color: rgb(238, 238, 238);
     text-align: center;
 }
-.window-open {
-    color: green;
+.window-closed {
+    color: red;
     font-weight: bold;
 }
 .save__btn {
@@ -433,6 +433,16 @@ ul {
 .players__table-select.club__table-player {
     width: 100%;
 }
+.table__players-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+.table__players-bottom span:nth-child(1),
+.table__players-bottom span:nth-child(3) {
+    cursor: pointer;
+}
+
+
 
 
 
