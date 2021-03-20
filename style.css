@@ -331,6 +331,7 @@ ul {
 .club__table {
     width: 100%;
     text-align: center;
+    border-spacing: 1px;
 }
 .club__table-header {
     display: flex;
@@ -409,13 +410,13 @@ ul {
     width: 100%;
     text-align: center;
     font-size: 12px;
+    border-spacing: 1px;
 }
 .select__row {
     width: 200px;
 }
 .players__table tr {
-    background-color: rgb(238, 238, 238);
-    
+    background-color: rgb(238, 238, 238);  
 }
 .players__table tr:nth-child(2n) {
     background-color: rgb(221, 221, 221);
@@ -423,9 +424,18 @@ ul {
 .table__head {
     background-color:rgb(27, 96, 155);
 }
-.players__table tr td {
-    padding: 3px 3px;
+.short__cell {
+    width: 40px;
 }
+.players__table tr td {
+    padding: 3px 5px;
+}
+.players__table-select.club__table-player {
+    width: 100%;
+}
+
+
+
 
 
 
