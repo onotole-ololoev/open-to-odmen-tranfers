@@ -300,6 +300,7 @@ ul {
     border-radius: 10px;
     text-align: center;
 }
+/* стили для блока трансферов ============================================================================== */
 .transfer__block {
     width: 100%;
     padding-bottom: 10px;
@@ -344,6 +345,10 @@ ul {
 .club__table td {
     padding: 3px;
 }
+.club__table tr td:nth-child(3),
+.club__table tr td:nth-child(4) {
+    width: 40px;
+}
 .club__table tr:nth-child(2n+1) {
     background-color: rgb(221, 221, 221);
 }
@@ -353,7 +358,7 @@ ul {
 .club__table tr.table__header {
     background-color:rgb(27, 96, 155);
 }
-.warning__logo {
+.keeper__logo {
     width: 15px;
     cursor: pointer;
 }
@@ -449,7 +454,7 @@ ul {
 }
 /* прячем кнопку НАЗАД */
 .players__list-back {
-    display: none;
+    display: block;
 }
 
 
@@ -607,6 +612,7 @@ ul {
     }
     .plus__logo {
         display: block;
+        margin-right: 3px;
     }
 }
 @media screen and (max-width: 400px) {
